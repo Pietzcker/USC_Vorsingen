@@ -1,0 +1,193 @@
+Tabelle Version 2.0
+
+[Layout]
+Breite=210
+Höhe=297
+Hochformat=0
+Links=5
+Rechts=5
+Oben=5
+Unten=5
+
+Datum=1
+Seitenzahlen=1
+Laufende Nummer=1
+Gitternetzlinien=1
+Dateiname in Fußzeile=0
+Gleiche Felder untereinander=1
+
+[Datenbank]
+Container=COMPersonen
+
+[Gruppierung]
+Gruppenwechsel=
+Gruppenüberschrift=
+Gruppenfuß=
+Seitenwechsel=0
+lfdGruppenwechsel=0
+
+[SubFilter] 79
+COMAusbildung_Schüler (Nr)=([Bis] = "" || [Bis] >= Heute()) && [Von] <= Heute()
+Welche=1
+Wieviele=0
+Haupt=4
+
+[SubFilter] 65
+COMPBereiche=([Bis] = "" || [Bis] >= Heute()) && [Von] <= Heute()
+Welche=1
+Wieviele=0
+Haupt=5
+
+[SubFilter] 40
+COMPTelefone=[Anschluss (Nr).Nummer] = 1
+Welche=0
+Wieviele=0
+Haupt=0
+
+[SubFilter] 50
+COMPZusätze=[Feld] >>! "Lied" || [Feld] = "Schule"
+Welche=1
+Wieviele=0
+Haupt=4
+
+[SubFilter] 61
+COMPersonen=IstStatus(Heute(),1) && IstBereich(Heute(),2,3,4)
+Welche=0
+Wieviele=0
+Haupt=0
+
+[Feld]
+Name=Vorname
+NeuName=Vorname
+Unterschrift=
+Linksbündig=1
+Ausblenden=1
+Summe=0
+Gruppensumme=0
+Währung=0
+WährungNull=0
+Breite=0
+Leer=
+
+[Feld]
+Name=Name
+NeuName=Name
+Unterschrift=
+Linksbündig=1
+Ausblenden=1
+Summe=0
+Gruppensumme=0
+Währung=0
+WährungNull=0
+Breite=0
+Leer=
+
+[Feld]
+Name=Alter
+NeuName=Alter
+Unterschrift=
+Linksbündig=0
+Ausblenden=1
+Summe=0
+Gruppensumme=0
+Währung=0
+WährungNull=0
+Breite=0
+Leer=
+
+[Feld]
+Name=Formel0
+NeuName=Zeit aktiv
+Unterschrift=
+Linksbündig=1
+Ausblenden=1
+Summe=0
+Gruppensumme=0
+Währung=0
+WährungNull=0
+Breite=0
+Leer=
+Formel=Kette(Jahr([Dauer Aktiv]), " J., ", Monat([Dauer Aktiv]), " M.")
+
+[Feld]
+Name=COMPInstrumente.Instrument (Nr)
+NeuName=Stimme/Instr.
+Unterschrift=
+Linksbündig=1
+Ausblenden=1
+Summe=0
+Gruppensumme=0
+Währung=0
+WährungNull=0
+Breite=0
+Leer=
+
+[Feld]
+Name=COMPZusätze.Feld
+NeuName=Schule/Lied
+Unterschrift=
+Linksbündig=1
+Ausblenden=1
+Summe=0
+Gruppensumme=0
+Währung=0
+WährungNull=0
+Breite=0
+Leer=
+
+[Feld]
+Name=COMPZusätze.Wert
+NeuName=Wert
+Unterschrift=
+Linksbündig=1
+Ausblenden=1
+Summe=0
+Gruppensumme=0
+Währung=0
+WährungNull=0
+Breite=0
+Leer=
+
+[Feld]
+Name=COMPBereiche.Bereich (Nr).Bereich
+NeuName=Chor
+Unterschrift=
+Linksbündig=1
+Ausblenden=1
+Summe=0
+Gruppensumme=0
+Währung=0
+WährungNull=0
+Breite=0
+Leer=
+
+[Feld]
+Name=COMAusbildung_Schüler (Nr).Ausbilder (Nr).Name
+NeuName=Stibi
+Unterschrift=
+Linksbündig=1
+Ausblenden=1
+Summe=0
+Gruppensumme=0
+Währung=0
+WährungNull=0
+Breite=0
+Leer=
+
+[Sortieren] 19
+Name	H
+Vorname	H
+
+[Schriftart]
+Name=Arial
+Größe=10
+Farbe=-2147483640
+
+[Überschrift]
+"Planung Vorsingen Gesamtliste"
+
+[Hauptüberschrift]
+Vereinsname()
+
+[Hilfe] 53
+Planungsliste fürs Vorsingen - Gesamtliste für Skript
